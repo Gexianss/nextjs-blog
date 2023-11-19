@@ -6,10 +6,29 @@ export default function Home() {
       <div className={styles.bg_img}>
         <p className={styles.p_title}>Hello, I'm Waffel.</p>
         <ul className={styles.nav_link}>
-          <li className={styles.nav_link_li}><Link href="" className={styles.my_link}>About</Link></li>
-          <li className={styles.nav_link_li}><Link href="" className={styles.my_link}>Posts</Link></li>
-          <li className={styles.nav_link_li}><Link href="" className={styles.my_link}>Travel</Link></li>
-          <li className={styles.nav_link_li}><Link href="" className={styles.my_link}>Changelog</Link></li>
+          <li className={styles.nav_link_li}>
+            <div className={styles.nav_link_width75}>
+              <Link href="" className={styles.my_link}>About</Link>
+            </div>
+          </li>
+          <li className={styles.nav_link_li}>
+          <div className={styles.nav_link_width75}>
+
+            <Link href="" className={styles.my_link}>Posts</Link>
+            </div>
+          </li>
+          <li className={styles.nav_link_li}>
+          <div className={styles.nav_link_width85}>
+
+            <Link href="" className={styles.my_link}>Travel</Link>
+            </div>
+          </li>
+          <li className={styles.nav_link_li}>
+          <div className={styles.nav_link_width85}>
+
+            <Link href="" className={styles.my_link}>Changelog</Link>
+</div>
+          </li>
         </ul>
       </div>
     </>
