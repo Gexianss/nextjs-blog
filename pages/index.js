@@ -1,38 +1,26 @@
-import styles from "../styles/Home.module.css"
-import Link from "next/link"
-export default function Home() {
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Navbar from '../components/layout/navbar';
+import Home from './home';
+import About from './about';
+import Posts from './posts';
+import Travel from './travel';
+
+const Index = () => {
   return (
-    <>
-      <div className={styles.bg_img}>
-        <p className={styles.p_title}>Hello, I'm Waffel.</p>
-        <ul className={styles.nav_link}>
-          <li className={styles.nav_link_li}>
-            <div className={styles.nav_link_width75}>
-              <Link href="" className={styles.my_link}>About</Link>
-            </div>
-          </li>
-          <li className={styles.nav_link_li}>
-          <div className={styles.nav_link_width75}>
+    <BrowserRouter>
+      <Routes>
+        <Route path="../components/layout/navbar" element={<Navbar/>}>
+          <Route index element={<Home />} />
+          <Route path="./about" element={<About />} />
+          <Route path="./posts" element={<Posts />} />
+          <Route path="./travel" element={<Travel />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
+};
 
-            <Link href="" className={styles.my_link}>Posts</Link>
-            </div>
-          </li>
-          <li className={styles.nav_link_li}>
-          <div className={styles.nav_link_width85}>
-
-            <Link href="" className={styles.my_link}>Travel</Link>
-            </div>
-          </li>
-          <li className={styles.nav_link_li}>
-          <div className={styles.nav_link_width85}>
-
-            <Link href="" className={styles.my_link}>Changelog</Link>
-</div>
-          </li>
-        </ul>
-      </div>
-    </>
-    
-  )
-
-}
+const root = document.getElementById('root');
+ReactDOM.createRoot(root).render(<Index />);

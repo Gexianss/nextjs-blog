@@ -8,11 +8,14 @@
   "dependencies": {
     "antd": "^5.9.2",
     "next": "latest",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "sass": "^1.68.0"
   },
   "engines": {
     "node": ">=18"
+  },
+  "devDependencies": {
+    "react-router-dom": "^6.19.0"
   }
 }
