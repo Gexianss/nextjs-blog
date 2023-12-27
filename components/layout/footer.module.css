@@ -1,11 +1,13 @@
 .subtitle {
-    position: relative;
-    color: rgb(255, 255, 255);
+    position: absolute;
+    color: white;
     font-size: 14px;
     list-style: none;
     display: flex;
     justify-content: center;
-    margin-top: -40px;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   .subtitle_li {
     padding-right: 20px;
