@@ -1,11 +1,4 @@
-.bg_img {
-  background-image: url(../../public/image/000002300015.jpg);
-  height: 100vh; 
-  background-position: 0px -100px; 
-  background-repeat: no-repeat; 
-  background-size: cover; 
-  position: relative;
-}
+
 .p_title {
   margin: 0;
   font-size: 48px;

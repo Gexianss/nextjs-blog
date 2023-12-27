@@ -1,26 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Navbar from '../components/layout/navbar';
-import Home from './home';
-import About from './about';
-import Posts from './posts';
-import Travel from './travel';
+import React from 'react'
+import Navebar from '../components/layout/navbar'
+import styles from '../styles/index.module.css'
 
-const Index = () => {
+export default function Index() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="../components/layout/navbar" element={<Navbar/>}>
-          <Route index element={<Home />} />
-          <Route path="./about" element={<About />} />
-          <Route path="./posts" element={<Posts />} />
-          <Route path="./travel" element={<Travel />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
-  );
-};
-
-const root = document.getElementById('root');
-ReactDOM.createRoot(root).render(<Index />);
+    <>
+      <div className={styles.bg_img}>
+        <Navebar />
+      </div>
+    </>
+  )
+}
