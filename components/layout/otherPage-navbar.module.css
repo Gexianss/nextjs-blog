@@ -1,7 +1,6 @@
 .nav_box {
     position: absolute;
     right: 0;
-    border-left: 2px solid #1f1f1f;
     height: 100vh;
 }
 .toggle {
@@ -11,17 +10,19 @@
     align-items: center;
     cursor: pointer;
 }
+
 .toggle_btn {
     border: none;
     background-color: rgba(0, 0, 0, 0);
     cursor: pointer;
-
 }
 .visible {
-    transform: translateX(0);
+    transform: translate(0);
+    transition: transform .5s ease; 
 }
 .hidden {
-    transform: translateX(100%);
+    transform: translate(100%);
+    transition: transform .5s ease; 
 }
 .ul {
     color: #1f1f1f;
@@ -33,24 +34,26 @@
     flex-direction: column;
     justify-content: center;
     height: 90vh;
-    transition: transform 0.3s ease; 
-    transform: translateX(0); 
-
 }
 .li {
     text-decoration: none;
     margin: 20px;
 }
 .link {
+    padding: 10px 0px;
     text-decoration: none;
     writing-mode: vertical-lr;
     font-weight: 600;
     letter-spacing: 3px;
+    color: #1f1f1f;
+    transition: color .5s linear,;
 }
 .link:hover {
     color: #D70000;
   }
-  .link:active {
+.link:active {
     color: #D70000;
+    border-inline: 5px solid #D70000;
+    border-radius: 50px;
   }
   

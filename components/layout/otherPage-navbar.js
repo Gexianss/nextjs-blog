@@ -4,20 +4,24 @@ import { FaAlignRight } from 'react-icons/fa6'
 import Link from 'next/link'
 
 export default function OtherPageNavbar() {
-  const [toggleClick, setToggleClick] = useState(true)
+  const [toggleHover, setToggleHover] = useState(false)
 
-  const handleToggleClick = () => {
-    setToggleClick(!toggleClick)
+  const handleToggleHover = () => {
+    setToggleHover(!toggleHover)
   }
   return (
     <>
-      <div className={styles.nav_box}>
+      <div
+        className={styles.nav_box}
+        onMouseEnter={handleToggleHover}
+        onMouseLeave={handleToggleHover}
+      >
         <div className={styles.toggle}>
-          <button className={styles.toggle_btn} onClick={handleToggleClick}>
+          <button className={styles.toggle_btn}>
             <FaAlignRight size={30} color="#1F1F1F" />
           </button>
         </div>
-        <div className={`${toggleClick ? styles.visible : styles.hidden}`}>
+        <div className={`${toggleHover ? styles.visible : styles.hidden}`}>
           <ul className={styles.ul}>
             <li className={styles.li}>
               <Link href={'/'} className={styles.link}>
