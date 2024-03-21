@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import OtherPageNavbar from '../components/layout/otherPage-navbar'
 import styles from '../styles/about.module.css'
 import Image from 'next/image'
 import { FaGithub } from 'react-icons/fa'
+import { FaAngleDoubleDown } from 'react-icons/fa'
+
 import Link from 'next/link'
 
-export default function about() {
+export default function About() {
+
   return (
     <>
       <OtherPageNavbar />
@@ -25,7 +28,7 @@ export default function about() {
         <p className={styles.main_box_p}>程式語言、財務會計、時間管理</p>
         <p className={styles.main_box_title}>我擁有的技術</p>
         <p className={styles.main_box_p}>
-          前端：Next.js、React.js、HTML5、CSS3、Bootstrap、Ajax、Axio
+          前端：Next.js、React.js、HTML5、CSS3、Bootstrap、Ajax、jQuery
         </p>
         <p className={styles.main_box_p}>後端：Node.js、RESTful API、Mysql</p>
         <p className={styles.main_box_p}>語言：JavaScript</p>
@@ -41,8 +44,12 @@ export default function about() {
           <FaGithub className={styles.circle_icon} />
         </Link>
       </div>
+
       <div className={styles.circle}>
         <p className={styles.circle_title}>About</p>
+      </div>
+      <div>
+        <FaAngleDoubleDown className={styles.test} />
       </div>
     </>
   )

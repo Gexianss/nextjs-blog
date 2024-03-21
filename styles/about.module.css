@@ -1,11 +1,11 @@
-
-
 .bg_box {
     width: 30vw;
     height: 100vh;
     background-color: #1f1f1f;
-    position: relative;
+    /* position: relative; */
+    position: fixed;
 }
+
 .main_box {
     width: 810px;
     height: 500px;
@@ -16,29 +16,36 @@
 }
 
 .main_box::-webkit-scrollbar {
-    width: 10px; /* 設定卷軸寬度 */
+    width: 10px;
+    /* 設定卷軸寬度 */
 }
-  
+
 .main_box::-webkit-scrollbar-thumb {
-    background-color: rgba(0,0,0,0); /* 設定卷軸滑塊顏色 */
+    background-color: rgba(0, 0, 0, 0);
+    /* 設定卷軸滑塊顏色 */
 }
-  
+
 .main_box::-webkit-scrollbar-track {
-    background-color: rgba(0,0,0,0); /* 設定卷軸軌道顏色 */
+    background-color: rgba(0, 0, 0, 0);
+    /* 設定卷軸軌道顏色 */
 }
+
 .image_style {
     margin-bottom: 20px;
 }
+
 .main_box_p {
     color: rgb(136, 129, 83);
     font-size: 18px;
     letter-spacing: 5px;
     margin-top: 10px;
-    font-family: 'ChineseFont','Noto Serif TC', serif;
+    font-family: 'ChineseFont', 'Noto Serif TC', serif;
 }
+
 .mg_20 {
     margin-top: 20px;
 }
+
 .main_box_title {
     color: rgb(183, 191, 158);
     font-size: 20px;
@@ -47,15 +54,17 @@
     font-family: 'Noto Serif TC', serif;
     margin: 20px 0px;
 }
+
 .circle {
     width: 150px;
     height: 150px;
-    background-color: rgba(215,0,0,.7);
+    background-color: rgba(215, 0, 0, .7);
     position: absolute;
     border-radius: 50%;
-    top:120px;
-    left: 1110px;
+    top: calc(20% - 75px);
+    left: calc(20% + 720px);
 }
+
 .circle_title {
     color: white;
     font-size: 32px;
@@ -65,8 +74,17 @@
     line-height: 150px;
     letter-spacing: 2px;
 }
+
 .circle_icon {
     color: white;
     font-size: 32px;
     margin-top: 20px;
+}
+
+.test {
+    position: absolute;
+    top: calc(20% + 470px);
+    left: calc(20% + 800px);
+    color: rgba(215, 0, 0, .7);
+    font-size: 30px;
 }
