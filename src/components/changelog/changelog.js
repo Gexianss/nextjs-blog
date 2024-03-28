@@ -1,5 +1,5 @@
 import React from 'react'
 
 export default function Changelog() {
-  return <div>Changelog</div>
+  return <div id='changelog'>Changelog</div>
 }

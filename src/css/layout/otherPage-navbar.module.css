@@ -3,6 +3,7 @@
     right: 0;
     height: 100vh;
 }
+
 .toggle {
     padding: 30px 30px 0px 30px;
     display: flex;
@@ -16,14 +17,17 @@
     background-color: rgba(0, 0, 0, 0);
     cursor: pointer;
 }
+
 .visible {
     transform: translate(0);
-    transition: transform .5s ease; 
+    transition: transform .5s ease;
 }
+
 .hidden {
     transform: translate(100%);
-    transition: transform .5s ease; 
+    transition: transform .5s ease;
 }
+
 .ul {
     color: #1f1f1f;
     list-style: none;
@@ -35,10 +39,12 @@
     justify-content: center;
     height: 90vh;
 }
+
 .li {
     text-decoration: none;
     margin: 20px;
 }
+
 .link {
     padding: 10px 0px;
     text-decoration: none;
@@ -46,14 +52,15 @@
     font-weight: 600;
     letter-spacing: 3px;
     color: #1f1f1f;
-    transition: color .5s linear,;
+    transition: color .5s linear, ;
 }
+
 .link:hover {
     color: #D70000;
-  }
+}
+
 .link:active {
     color: #D70000;
     border-inline: 5px solid #D70000;
     border-radius: 50px;
-  }
-  
+}

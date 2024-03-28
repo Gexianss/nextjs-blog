@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import styles from './otherPage-navbar.module.css'
+import styles from '../../css/layout/otherPage-navbar.module.css'
 import { FaAlignRight } from 'react-icons/fa6'
 import Link from 'next/link'
 
@@ -29,22 +29,22 @@ export default function OtherPageNavbar() {
               </Link>
             </li>
             <li className={styles.li}>
-              <Link href={'/about'} className={styles.link}>
+              <Link href={'#about'} className={styles.link}>
                 About
               </Link>
             </li>
             <li className={styles.li}>
-              <Link href={'/posts'} className={styles.link}>
+              <Link href={'#posts'} className={styles.link}>
                 Posts
               </Link>
             </li>
             <li className={styles.li}>
-              <Link href={'/travel'} className={styles.link}>
+              <Link href={'#travel'} className={styles.link}>
                 Travel
               </Link>
             </li>
             <li className={styles.li}>
-              <Link href={'/changelog'} className={styles.link}>
+              <Link href={'#changelog'} className={styles.link}>
                 Changelog
               </Link>
             </li>

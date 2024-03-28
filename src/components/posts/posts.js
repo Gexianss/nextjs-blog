@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect } from 'react'
 
 export default function Posts() {
   const [pages, setPages] = useState(null)
@@ -23,20 +23,20 @@ export default function Posts() {
 
   // 如果正在加載數據，則顯示加載中的消息
   if (!pages) {
-    return <div>Loading...</div>
+    return <div id="posts">Loading...</div>
   }
 
   // 數據加載完成後，呈現數據
   return (
-    <div>
+    <div id="posts">
       {pages.map((page) => (
         <div key={page.id}>
           <div>Title: {page.data.Title.rich_text[0].text.content}</div>
-          <div>Description: {page.data.Description.rich_text[0].text.content}</div>
+          <div>
+            Description: {page.data.Description.rich_text[0].text.content}
+          </div>
         </div>
       ))}
     </div>
   )
 }
-
-

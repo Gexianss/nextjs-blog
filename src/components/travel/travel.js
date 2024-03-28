@@ -1,5 +1,5 @@
 import React from 'react'
 
 export default function travel() {
-  return <div>travel</div>
+  return <div id='travel'>travel</div>
 }

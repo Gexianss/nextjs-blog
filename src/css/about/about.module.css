@@ -1,9 +1,12 @@
+.about_context {
+    height: 100vh;
+}
+
 .bg_box {
     width: 30vw;
     height: 100vh;
     background-color: #1f1f1f;
-    /* position: relative; */
-    position: fixed;
+    position: relative;
 }
 
 .main_box {
@@ -12,7 +15,7 @@
     overflow: auto;
     position: absolute;
     top: 20%;
-    left: 20%;
+    left: 70%;
 }
 
 .main_box::-webkit-scrollbar {
@@ -62,7 +65,7 @@
     position: absolute;
     border-radius: 50%;
     top: calc(20% - 75px);
-    left: calc(20% + 720px);
+    left: calc(70% + 720px);
 }
 
 .circle_title {
@@ -81,10 +84,10 @@
     margin-top: 20px;
 }
 
-.test {
+.icon_down {
     position: absolute;
-    top: calc(20% + 470px);
-    left: calc(20% + 800px);
+    top: calc(120% + 470px);
+    left: calc(22% + 800px);
     color: rgba(215, 0, 0, .7);
     font-size: 30px;
 }

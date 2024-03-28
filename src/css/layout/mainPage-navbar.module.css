@@ -1,23 +1,30 @@
+.nav_box {
+  position: absolute;
+  z-index: 1;
+  top: 6%;
+  right: -2%;
+}
 .nav_link {
   color: white;
-  font-size: 24px;
+  font-size: 26px;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   padding-right: 250px;
   list-style: none;
+  letter-spacing: 0.1rem;
 }
 .nav_link_li {
   margin-left: 30px;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .nav_link_width70 {
-  width: 70px;
+  width: 85px;
 }
 
 .nav_link_width85 {
-  width: 85px;
+  width: 100px;
 }
 
 .my_link {
