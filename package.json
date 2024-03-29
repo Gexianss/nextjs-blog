@@ -5,6 +5,7 @@
     "dev": "next dev",
     "start": "next start"
   },
+  "type": "module",
   "dependencies": {
     "@notionhq/client": "^2.2.14",
     "antd": "^5.9.2",

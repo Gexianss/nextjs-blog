@@ -1,10 +1,9 @@
 import React from 'react'
 import OtherPageNavbar from '../layout/otherPage-navbar'
 import styles from '../../css/about/about.module.css'
-import Image from 'next/image'
+import { Image } from 'next/dist/client/image-component'
 import { FaGithub } from 'react-icons/fa'
 import { FaAngleDoubleDown } from 'react-icons/fa'
-
 import Link from 'next/link'
 
 export default function About() {
@@ -20,7 +19,7 @@ export default function About() {
               height={500}
               alt=""
               className={styles.image_style}
-            ></Image>
+            />
             <p className={styles.main_box_p}>
               您好，我叫張溦珊，目前是位剛轉職的前端工程師，會製作這個網頁主要的目的是要分享我轉職的過程，也順便記錄我的生活，希望透過這個網站，讓你們更了解我。
             </p>

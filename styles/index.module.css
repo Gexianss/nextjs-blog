@@ -3,25 +3,8 @@
 }
 
 .bg_img {
-  background-image: url('../src/image/index-image.jpg');
+  background-image: url('../public/image/index-image.jpg');
   position: relative;
-  /* height: 100vh;
-  background-position: 0px -100px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative; */
-  /* width: 100vw;
-  height: 100vh;
-  background: url("../src/image/index-image.jpg") no-repeat center center;
-  background-size: cover;
-  font-size: 550px;
-  text-align: center;
-  line-height: 100vh;
-  font-weight: bold;
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-stroke: 10px rgb(170, 255, 0); */
 }
 
 .p_title {
