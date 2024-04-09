@@ -4,13 +4,12 @@ import MainPageNavebar from '../src/components/layout/mainPage-navbar'
 import Footer from '../src/components/layout/footer'
 import styles from '../styles/index.module.css'
 import About from '../src/components/about/about'
-// import Posts from '../src/components/posts/posts'
+import Posts from '../src/components/posts/posts'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 
 export default function Index() {
   const [showNavebar, setShowNavebar] = useState(false)
-  // const [anchorClicked, setAnchorClicked] = useState(false)
   //index的動畫顯示
   useEffect(() => {
     const background = gsap.timeline()
@@ -56,47 +55,47 @@ export default function Index() {
     )
   }, [setShowNavebar])
 
-  const aboutRef = useRef(null)
-  const [anchorClicked, setAnchorClicked] = useState(false)
+  // const aboutRef = useRef(null)
+  // const [anchorClicked, setAnchorClicked] = useState(false)
 
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger)
-    gsap.utils.toArray(`${styles.nav_link_li}`).forEach((li) => {
-      const a = li.querySelector('a')
-      const targetId = a.getAttribute('href').substring(1)
-      const target = document.getElementById(targetId)
-      if (target) {
-        a.addEventListener('click', function (e) {
-          e.preventDefault()
-          e.stopPropagation()
+  // useEffect(() => {
+  //   gsap.registerPlugin(ScrollTrigger)
+  //   gsap.utils.toArray(`${styles.nav_link_li}`).forEach((li) => {
+  //     const a = li.querySelector('a')
+  //     const targetId = a.getAttribute('href').substring(1)
+  //     const target = document.getElementById(targetId)
+  //     if (target) {
+  //       a.addEventListener('click', function (e) {
+  //         e.preventDefault()
+  //         e.stopPropagation()
 
-          const scrollTrigger = ScrollTrigger.create({
-            trigger: a,
-            pin: target,
-            start: 'top top',
-            end: 'bottom bottom',
-            onEnter: () => {
-              setAnchorClicked(true)
-            },
-            onLeave: () => {
-              setAnchorClicked(false)
-            },
-          })
-          const scrollTo = (target) => {
-            const { top } = target.getBoundingClientRect()
+  //         const scrollTrigger = ScrollTrigger.create({
+  //           trigger: a,
+  //           pin: target,
+  //           start: 'top top',
+  //           end: 'bottom bottom',
+  //           onEnter: () => {
+  //             setAnchorClicked(true)
+  //           },
+  //           onLeave: () => {
+  //             setAnchorClicked(false)
+  //           },
+  //         })
+  //         const scrollTo = (target) => {
+  //           const { top } = target.getBoundingClientRect()
 
-            gsap.to(window, {
-              duration: 1,
-              scrollTo: {
-                y: top,
-              },
-            })
-          }
-          scrollTo(target)
-        })
-      }
-    })
-  }, [])
+  //           gsap.to(window, {
+  //             duration: 1,
+  //             scrollTo: {
+  //               y: top,
+  //             },
+  //           })
+  //         }
+  //         scrollTo(target)
+  //       })
+  //     }
+  //   })
+  // }, [])
 
   return (
     <>
@@ -112,8 +111,8 @@ export default function Index() {
       </div>
 
       {/* <OtherPageNavbar /> */}
-      <About ref={aboutRef} />
-      <div className={styles.index_grid}>{/* <Posts /> */}</div>
+      <About />
+      <div className={styles.index_grid}><Posts /></div>
     </>
   )
 }

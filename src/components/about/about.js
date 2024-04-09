@@ -7,10 +7,9 @@ import { FaAngleDoubleDown } from 'react-icons/fa'
 import Link from 'next/link'
 
 export default function About() {
-  const aboutRef = useRef(null)
   return (
     <>
-      <div id="about" className={styles.about_context} ref={aboutRef}>
+      <div id="about" className={styles.about_context}>
         <OtherPageNavbar />
         <div className={styles.bg_box}>
           <div className={styles.main_box}>
