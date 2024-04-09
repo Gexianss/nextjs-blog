@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import OtherPageNavbar from '../layout/otherPage-navbar'
 import styles from '../../css/about/about.module.css'
 import { Image } from 'next/dist/client/image-component'
@@ -7,9 +7,10 @@ import { FaAngleDoubleDown } from 'react-icons/fa'
 import Link from 'next/link'
 
 export default function About() {
+  const aboutRef = useRef(null)
   return (
     <>
-      <div id="about" className={styles.about_context}>
+      <div id="about" className={styles.about_context} ref={aboutRef}>
         <OtherPageNavbar />
         <div className={styles.bg_box}>
           <div className={styles.main_box}>
