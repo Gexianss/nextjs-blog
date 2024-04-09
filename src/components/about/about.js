@@ -1,5 +1,4 @@
-import React, { useRef } from 'react'
-import OtherPageNavbar from '../layout/otherPage-navbar'
+import React from 'react'
 import styles from '../../css/about/about.module.css'
 import { Image } from 'next/dist/client/image-component'
 import { FaGithub } from 'react-icons/fa'
@@ -10,7 +9,6 @@ export default function About() {
   return (
     <>
       <div id="about" className={styles.about_context}>
-        <OtherPageNavbar />
         <div className={styles.bg_box}>
           <div className={styles.main_box}>
             <Image

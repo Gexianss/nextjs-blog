@@ -1,42 +1,20 @@
-import { useRef, useEffect, useState } from 'react'
 import styles from '../../css/layout/mainPage-navbar.module.css'
-// import Link from 'next/link'
-// import gsap from 'gsap'
-// import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
+import { ScrollToPlugin } from 'gsap/dist/ScrollToPlugin'
+
 export default function Navbar() {
-  const [activeSection, setActiveSection] = useState('')
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const aboutSection = document.getElementById('about')
-      const postsSection = document.getElementById('posts')
-      const travelSection = document.getElementById('travel')
-      const changelogSection = document.getElementById('changelog')
-
-      const scrollPosition = window.scrollY + window.innerHeight / 2
-
-      if (aboutSection && scrollPosition >= aboutSection.offsetTop) {
-        setActiveSection('about')
-      } else if (postsSection && scrollPosition >= postsSection.offsetTop) {
-        setActiveSection('posts')
-      } else if (travelSection && scrollPosition >= travelSection.offsetTop) {
-        setActiveSection('travel')
-      } else if (
-        changelogSection &&
-        scrollPosition >= changelogSection.offsetTop
-      ) {
-        setActiveSection('changelog')
-      }
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [])
+  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
   const handleNavClick = (sectionId) => {
     const section = document.getElementById(sectionId)
     if (section) {
-      section.scrollIntoView({ behavior: 'smooth' })
+      gsap.to(window, {
+        duration: 1,
+        scrollTo: {
+          y: section.offsetTop,
+          autoKill: true,
+        },
+      })
     }
   }
   return (

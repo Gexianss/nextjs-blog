@@ -5,6 +5,7 @@
 .bg_img {
   background-image: url('../public/image/index-image.jpg');
   position: relative;
+  z-index: 2;
 }
 
 .p_title {

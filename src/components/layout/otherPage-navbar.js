@@ -1,13 +1,29 @@
 import React, { useState } from 'react'
 import styles from '../../css/layout/otherPage-navbar.module.css'
 import { FaAlignRight } from 'react-icons/fa6'
-import Link from 'next/link'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
+import { ScrollToPlugin } from 'gsap/dist/ScrollToPlugin'
 
 export default function OtherPageNavbar() {
+  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
   const [toggleHover, setToggleHover] = useState(false)
 
   const handleToggleHover = () => {
     setToggleHover(!toggleHover)
+  }
+
+  const handleNavClick = (sectionId) => {
+    const section = document.getElementById(sectionId)
+    if (section) {
+      gsap.to(window, {
+        duration: 1,
+        scrollTo: {
+          y: section.offsetTop,
+          autoKill: true,
+        },
+      })
+    }
   }
   return (
     <>
@@ -24,29 +40,44 @@ export default function OtherPageNavbar() {
         <div className={`${toggleHover ? styles.visible : styles.hidden}`}>
           <ul className={styles.ul}>
             <li className={styles.li}>
-              <Link href={'/'} className={styles.link}>
+              <button
+                onClick={() => handleNavClick('home')}
+                className={styles.link}
+              >
                 Home
-              </Link>
+              </button>
             </li>
             <li className={styles.li}>
-              <Link href={'#about'} className={styles.link}>
+              <button
+                onClick={() => handleNavClick('about')}
+                className={styles.link}
+              >
                 About
-              </Link>
+              </button>
             </li>
             <li className={styles.li}>
-              <Link href={'#posts'} className={styles.link}>
+              <button
+                onClick={() => handleNavClick('posts')}
+                className={styles.link}
+              >
                 Posts
-              </Link>
+              </button>
             </li>
             <li className={styles.li}>
-              <Link href={'#travel'} className={styles.link}>
+              <button
+                onClick={() => handleNavClick('travel')}
+                className={styles.link}
+              >
                 Travel
-              </Link>
+              </button>
             </li>
             <li className={styles.li}>
-              <Link href={'#changelog'} className={styles.link}>
+              <button
+                onClick={() => handleNavClick('changelog')}
+                className={styles.link}
+              >
                 Changelog
-              </Link>
+              </button>
             </li>
           </ul>
         </div>
