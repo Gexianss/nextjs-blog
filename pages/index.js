@@ -1,13 +1,17 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import MainPageNavebar from '../src/components/layout/mainPage-navbar'
 import OtherPageNavbar from '../src/components/layout/otherPage-navbar'
 import Footer from '../src/components/layout/footer'
 import styles from '../styles/index.module.css'
 import About from '../src/components/about/about'
 import Posts from '../src/components/posts/posts'
-import gsap from 'gsap'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
+import { ScrollToPlugin } from 'gsap/dist/ScrollToPlugin'
 
 export default function Index() {
+  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
+  const aboutRef = useRef(null)
   const [showNavebar, setShowNavebar] = useState(false)
   const [showOtherPageNavbar, setShowOtherPageNavbar] = useState(false)
 
@@ -57,6 +61,8 @@ export default function Index() {
     )
   }, [setShowNavebar, setShowOtherPageNavbar])
 
+  
+
   return (
     <>
       <div className={styles.index_grid} id="home">
@@ -70,7 +76,7 @@ export default function Index() {
         )}
       </div>
 
-      <About />
+      <About ref={aboutRef} />
       {showOtherPageNavbar && <OtherPageNavbar />}
       <div className={styles.index_grid}>
         <Posts />
