@@ -58,6 +58,12 @@
     margin: 20px 0px;
 }
 
+.circle_icon {
+    color: white;
+    font-size: 32px;
+    margin-top: 20px;
+}
+
 .circle {
     width: 150px;
     height: 150px;
@@ -76,18 +82,4 @@
     justify-content: center;
     line-height: 150px;
     letter-spacing: 2px;
-}
-
-.circle_icon {
-    color: white;
-    font-size: 32px;
-    margin-top: 20px;
-}
-
-.icon_down {
-    position: absolute;
-    top: calc(120% + 470px);
-    left: calc(22% + 800px);
-    color: rgba(215, 0, 0, .7);
-    font-size: 30px;
 }

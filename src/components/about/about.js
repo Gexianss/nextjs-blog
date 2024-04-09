@@ -3,21 +3,20 @@ import styles from '../../css/about/about.module.css'
 import { Image } from 'next/dist/client/image-component'
 import Link from 'next/link'
 import { FaGithub } from 'react-icons/fa'
-import { FaAngleDoubleDown } from 'react-icons/fa'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import { ScrollToPlugin } from 'gsap/dist/ScrollToPlugin'
 
 export default function About() {
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
-
+  
   useEffect(() => {
     const t = gsap.to(`.${styles.scroll}`, {
       y: -800,
       paused: true,
       ease: 'none',
     })
-
+    
     ScrollTrigger.create({
       trigger: '#about',
       pin: true,
@@ -26,7 +25,7 @@ export default function About() {
       pinSpacing: true,
       fastScrollEnd: true,
       onUpdate: (self) => {
-        gsap.to(t, { progress: self.progress, duration: 1 })
+        gsap.to(t, { progress: self.progress, duration: 0.2 })
       },
     })
   }, [])
@@ -89,9 +88,6 @@ export default function About() {
             <p className={styles.circle_title}>About</p>
           </div>
         </div>
-        {/* <div>
-          <FaAngleDoubleDown className={styles.icon_down} />
-        </div> */}
       </div>
     </>
   )

@@ -11,7 +11,6 @@ import { ScrollToPlugin } from 'gsap/dist/ScrollToPlugin'
 
 export default function Index() {
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
-  const aboutRef = useRef(null)
   const [showNavebar, setShowNavebar] = useState(false)
   const [showOtherPageNavbar, setShowOtherPageNavbar] = useState(false)
 
@@ -61,8 +60,6 @@ export default function Index() {
     )
   }, [setShowNavebar, setShowOtherPageNavbar])
 
-  
-
   return (
     <>
       <div className={styles.index_grid} id="home">
@@ -76,7 +73,7 @@ export default function Index() {
         )}
       </div>
 
-      <About ref={aboutRef} />
+      <About />
       {showOtherPageNavbar && <OtherPageNavbar />}
       <div className={styles.index_grid}>
         <Posts />

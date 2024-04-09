@@ -3,10 +3,13 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import { ScrollToPlugin } from 'gsap/dist/ScrollToPlugin'
 
+
 export default function Navbar() {
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
   const handleNavClick = (sectionId) => {
     const section = document.getElementById(sectionId)
+    // ScrollTrigger.getAll().forEach((trigger) => trigger.kill())
+
     if (section) {
       gsap.to(window, {
         duration: 1,
@@ -16,6 +19,7 @@ export default function Navbar() {
         },
       })
     }
+    // ScrollTrigger.refresh()
   }
   return (
     <>
