@@ -5,6 +5,7 @@ import Footer from '../src/components/layout/footer'
 import styles from '../styles/index.module.css'
 import About from '../src/components/about/about'
 import Posts from '../src/components/posts/posts'
+import Travel from '../src/components/travel/travel'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import { ScrollToPlugin } from 'gsap/dist/ScrollToPlugin'
@@ -77,6 +78,9 @@ export default function Index() {
       {showOtherPageNavbar && <OtherPageNavbar />}
       <div className={styles.index_grid}>
         <Posts />
+      </div>
+      <div className={styles.index_grid}>
+        <Travel />
       </div>
     </>
   )

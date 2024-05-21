@@ -8,8 +8,6 @@ export default function Navbar() {
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
   const handleNavClick = (sectionId) => {
     const section = document.getElementById(sectionId)
-    // ScrollTrigger.getAll().forEach((trigger) => trigger.kill())
-
     if (section) {
       gsap.to(window, {
         duration: 1,
@@ -19,7 +17,6 @@ export default function Navbar() {
         },
       })
     }
-    // ScrollTrigger.refresh()
   }
   return (
     <>
